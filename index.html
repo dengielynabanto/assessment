@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashionova Market</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="addToCarts.js"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="top-container">
+      <div class="logo-name">
+    <header class="header">
+        <a href="cart.html"><i style="font-size:24px" class="fa">&#xf07a;</i></a>
+        <h1>Fashionova</h1>
+        <hr>
+
+        <div class="slideshow-container">
+            <div class="banner">
+                <h2>Explore your true self</h2>
+                <p>Make yourself more fashionable and class</p>
+                <button>Buy Now!</button>
+            </div>
+            <div class="mySlides fade">
+              <img src="img/bg.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="img/bg2.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="img/bg3.jpg" style="width:100%">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
+            <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+            
+    </header>
+    <hr>
+    <br><br>
+    
+    <h3 class="product">Our Product</h3>
+            <div class="main-container">
+                <div class="main-content">
+                    <img src="img/1.jpg" width="300px" height="400px">
+                    <p class="Name">Strawberry Print Dress</p>
+                    <p class="Brand">H&M</p>
+                    <p class="Desc">korean style dress</p>
+                    <p class="Price">Php. 550.00</p>
+                    <label>Size:</label>
+                    <select>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                        <option>Extra Small</option>
+                        <option>Extra Large</option>
+                    </select>
+                    <br><br>
+                    <button type="button">Order Me!</button>
+             </div>
+
+            <div class="Left-side">
+                <img src="img/2.jpg" width="300px" height="400px">
+                <p class="Name">Black Dress</p>
+                <p class="Brand">H&M</p>
+                <p class="Desc">Casual Dress</p>
+                <p clas="Price">Php 600.00</p>
+                <label>Size:</label>
+                <select>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                    <option>Extra Small</option>
+                    <option>Extra Large</option>
+                </select>
+                <br><br>
+                <button type="button">Order Me!</button>
+            </div>
+
+            <div class="Right-side">
+                <img src="img/3.jpg" width="300px" height="400px">
+                <p class="Name">Floroal Dress</p>
+                <p class="Brand">H&M</p>
+                <p class="Desc">White Dress with floral print</p>
+                <p class="Price">Php 300.00</p>
+                <label>Size:</label>
+                <select>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                    <option>Extra Small</option>
+                    <option>Extra Large</option>
+                </select>
+                <br><br>
+                <button type="button">Order Me!</button>
+            </div>
+                
+            <div class="Bottom-main-content">
+                <img src="img/4.jpg" width="300px" height="400px">
+                <p class="Name">Casual Style</p>
+                <p class="Brand">H&M</p>
+                <p class="Desc">White top with short</p>
+                <p class="Price">Php 400.00</p>
+                <label>Size:</label>
+                <select>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                    <option>Extra Small</option>
+                    <option>Extra Large</option>
+                </select>
+                <br><br>
+                <button type="button">Order Me!</button>
+            </div>
+
+            <div class="Bottom-left-side">
+                <img src="img/5.png" width="300px" height="400px">
+                <p class="Name">Croptop Style</p>
+                <p class="Brand">H&M</p>
+                <p class="Desc">Spaghetti Strap Croptop</p>
+                <p class="Price">Php 200.00</p>
+                <label>Size:</label>
+                <select>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                    <option>Extra Small</option>
+                    <option>Extra Large</option>
+                </select>
+                <br><br>
+                <button type="button">Order Me!</button>
+            </div>
+
+            <div class="Bottom-right-side">
+                <img src="img/6.jpg" width="300px" height="400px">
+                <p class="Name">Casual Croptop Style </p>
+                <p class="Brand">H&M</p>
+                <p class="Desc">Casual croptop with skirt</p>
+                <p class="Price">Php 350.00</p>
+                <label>Size:</label>
+                <select>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                    <option>Extra Small</option>
+                    <option>Extra Large</option>
+                </select>
+                <br><br>
+                <button type="button">Order Me!</button>
+            </div>
+
+            <div class="Under-main-content">
+                <img src="img/7.jpg" width="300px" height="400px">
+                <p class="Name">Croptop with Skirt </p>
+                <p class="Brand">H&M</p>
+                <p class="Desc">Stripe Croptop with skirt</p>
+                <p class="Price">Php 400.00</p>
+                <label>Size:</label>
+                <select>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                    <option>Extra Small</option>
+                    <option>Extra Large</option>
+                </select>
+                <br><br>
+                <button type="button">Order Me!</button>
+            </div>
+
+            <div class="Under-right-side">
+                <img src="img/8.jpg" width="300px" height="400px">
+                <p class="Name">Croptop with Skirt black </p>
+                <p class="Brand">H&M</p>
+                <p class="Desc">Color black Croptop with skirt</p>
+                <p class="Price">Php 600.00</p>
+                <label>Size:</label>
+                <select>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                    <option>Extra Small</option>
+                    <option>Extra Large</option>
+                </select>
+                <br><br>
+                <button type="button">Order Me!</button>
+            </div>
+
+            <div class="Under-left-side">
+                <img src="img/9.jpg" width="300px" height="400px">
+                <p class="Name">Casual Top </p>
+                <p class="Brand">H&M</p>
+                <p class="Desc">Casual Top with croptop style</p>
+                <p class="Price">Php 700.00</p>
+                <label>Size:</label>
+                <select>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                    <option>Extra Small</option>
+                    <option>Extra Large</option>
+                </select>
+                <br><br>
+                <button type="button">Order Me!</button>
+            </div>
+       
+
+            <footer>
+                <br><br><br><br><br><br><br><br><br><br>
+                <p>&copy FED Assessment-Basic Web Development 2022</p>
+            </footer>
+
+
+
+
+
+
+
+
+
+
+                           
+
+</body>
+</html>
+
+
